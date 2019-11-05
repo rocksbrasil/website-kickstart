@@ -14,6 +14,10 @@
 /tmp/tests/*
 !/tmp/tests/empty
 
+templates/compiled
+*.log
+*.txt
+
 /logs/*
 !/logs/empty
 
