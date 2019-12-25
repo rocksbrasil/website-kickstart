@@ -71,7 +71,7 @@ if($_PAGE && file_exists('templates/'.$_PAGE.'.html')){
         include_once('engines/404.php');
     }
     if(file_exists('templates/404.html')){
-        $smarty->display('smarty/templates/404.html');
+        $smarty->display('templates/404.html');
     }else{
         echo "<h1>404 Not Found</h1>";
     }
