@@ -184,10 +184,10 @@ function validarCPF($cpf = false) {
 	} else {// Calcula os números para verificar se o CPF é verdadeiro
 		for ($t = 9; $t < 11; $t++) {
 			for ($d = 0, $c = 0; $c < $t; $c++) {
-				$d += $cpf{$c} * (($t + 1) - $c);
+				$d += $cpf[$c] * (($t + 1) - $c);
 			}
 			$d = ((10 * $d) % 11) % 10;
-			if ($cpf{$c} != $d) {
+			if ($cpf[$c] != $d) {
 				return FALSE;
 			}
 		}
@@ -437,7 +437,7 @@ function hrefDecode($href){
 
 function truepath($path){
     // whether $path is unix or not
-    $unipath=strlen($path)==0 || $path{0}!='/';
+    $unipath=strlen($path)==0 || $path[0]!='/';
     // attempts to detect if path is relative in which case, add cwd
     if(strpos($path,':')===false && $unipath)
         $path=getcwd().DIRECTORY_SEPARATOR.$path;
