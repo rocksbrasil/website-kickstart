@@ -55,12 +55,11 @@ Acesse no navegador: [http://localhost:8000](http://localhost:8000)
 ### 1️⃣ Criar uma página nova, é muito fácil, após primeira / da url, é o nome de sua página, um exemplo https://meusite.com/[nomedapagina]
 No diretório `templates/`, crie um novo arquivo `.html`, por exemplo, `nomedapagina.html`:
 ```smarty
-{include file="cabecalho.tpl" titulo="Título da Nova Página"}
+{include file="head.html"}
 
 <h1>{$titulo}</h1>
 <p>{$conteudo}</p>
 
-{include file="rodape.tpl"}
 ```
 
 ### 2️⃣ Criar o controlador PHP da nova página
@@ -75,7 +74,7 @@ $_TEMPLATE['conteudo'] = "Conteúdo";
 
 ### 3️⃣ Criar estlização (CSS)
 Crie um arquivo CSS no diretório `css/`, por exemplo, `nomedapagina.css`, e codifique a estilização de sua página.
-Você também pode colocar estilos globais no arquivo `css/estilo.css`, destinado a estilizações que estão presentes em mais de uma página.
+Você também pode colocar estilos globais no arquivo `css/global.css`, destinado a estilizações que estão presentes em mais de uma página.
 O arquivo de css da página, é automaticamente incluído no head da página.
 
 
