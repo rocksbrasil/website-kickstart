@@ -40,8 +40,8 @@ git clone https://github.com/rocksbrasil/website-kickstart.git
 ```
 
 
-### 4️⃣ Executar a aplicação
-Você pode utilizar um servidor local como o embutido do PHP:
+### 2️⃣ Executar a Hello World da aplicação
+Você pode utilizar um servidor local como o embutido do PHP, ou acessar seu servidor apache, simplesmente.
 ```bash
 php -S localhost:8000
 ```
@@ -52,7 +52,7 @@ Acesse no navegador: [http://localhost:8000](http://localhost:8000)
 
 ## 📄 Como Criar uma Nova Página
 
-### 1️⃣ Criar uma página nova, é muito fácil, cada / após a url, é o nome de sua página, um exemplo https://meusite.com/[nomedapagina]
+### 1️⃣ Criar uma página nova, é muito fácil, após primeira / da url, é o nome de sua página, um exemplo https://meusite.com/[nomedapagina]
 No diretório `templates/`, crie um novo arquivo `.html`, por exemplo, `nomedapagina.html`:
 ```smarty
 {include file="cabecalho.tpl" titulo="Título da Nova Página"}
@@ -63,7 +63,7 @@ No diretório `templates/`, crie um novo arquivo `.html`, por exemplo, `nomedapa
 {include file="rodape.tpl"}
 ```
 
-### 2️⃣ Criar o controlador da nova página
+### 2️⃣ Criar o controlador PHP da nova página
 Crie um arquivo PHP no diretório `templates/`, por exemplo, `nomedapagina.php`, e codifique o backend de sua página.
 Usamos uma variável (array) global chamada $_TEMPLATE, onde você pode enviar variáveis para seus templates. (views).
 ```php
@@ -83,7 +83,7 @@ O arquivo de css da página, é automaticamente incluído no head da página.
 ### 4️⃣ Acessar a nova página
 Após salvar os arquivos, acesse a nova página pelo navegador:
 ```
-http://localhost:8000/nova_pagina.php
+http://localhost:8000/nomedapagina
 ```
 
 
